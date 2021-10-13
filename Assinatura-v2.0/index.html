@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Assinatura</title>
+</head>
+<body>
+    
+    <form id="form-assinatura" name="form-assinatura">
+
+        <h2>Gerar Assinatura</h2>
+
+        <div class="input">
+
+            <input type="text" id="name" name="name" required>
+            <label for="name" id="labelName">Nome <strong title="Campo Obriatório">*</strong></label>
+
+            <span class="error"></span>
+
+        </div>
+
+        <div class="input">
+
+            <input type="text" id="charge" name="charge" required>
+            <label for="charge" id="labelCharge">Cargo <strong title="Campo Obriatório">*</strong></label>
+
+            <span class="error"></span>
+
+        </div>
+
+        <div class="input">
+
+            <input type="tel" id="tel" name="tel" required>
+            <label for="tel" id="labelTel">Telefone <strong title="Campo Obriatório">*</strong></label>
+
+            <span class="error"></span>
+
+        </div>
+
+        <button id="gerar" type="button" name="button">Gerar Assinatura</button>
+        <!--<button id="newCharge" type="button" name="plusCharge">Cargo Extra</button>-->
+
+    </form>
+
+    <div class="modal-overlay">
+
+        <img src="assets/close.png" alt="Botão para fechar o modal" id="close">
+
+        <div class="modal">
+
+            <div class="assinatura">
+
+                <canvas id="canvas" width="700" height="200"></canvas>
+                <img src="assets/logo_esquerda_atual_2.png" alt="Logo" id="logo" hidden>
+                <img src="assets/background.png" alt="Background" id="background" hidden>
+
+                <button type="button" id="btn">Download</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./script/script.js"></script>
+
+</body>
+</html>

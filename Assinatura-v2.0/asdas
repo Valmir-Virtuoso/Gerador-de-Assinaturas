@@ -1,0 +1,39 @@
+//Criando um novo campo de cargo
+newButton.addEventListener("click", ()=>{
+
+    contador++;
+    validCharge2 = true;
+    let box = document.createElement('div');
+    box.classList.add('input')
+    form.insertBefore(box, form.childNodes[6]);
+
+    let newInputCharge = document.createElement('input');
+    newInputCharge.setAttribute('type', 'text');
+    newInputCharge.setAttribute('name', `charge ${contador}`);
+    newInputCharge.setAttribute('id', `charge${contador}`);
+    newInputCharge.setAttribute('required', '');
+
+    box.appendChild(newInputCharge);
+
+    let newLabel = document.createElement('label');
+    newLabel.setAttribute('for', `charge ${contador}`);
+    newLabel.setAttribute('id', `labelCharge${contador}`);
+    newLabel.textContent = `Cargo ${contador}`;
+    box.insertBefore(newLabel, box.childNodes[1]);
+
+    let newSpanError = document.createElement('span');
+    newSpanError.setAttribute('class', 'error');
+
+    box.insertBefore(newSpanError, box.childNodes[2])
+
+    if(document.querySelector('#charge2').validity.valid){
+
+        console.log('Campo legal!')
+        
+    }else{
+
+        console.log('Não Campo legal!')
+
+    }   
+
+})
